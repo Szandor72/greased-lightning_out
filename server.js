@@ -11,8 +11,8 @@ let oauth = new Oauth();
 const parameters = {
   client_id: process.env.CONSUMERKEY,
   client_secret: process.env.SECRET,
-  username: 'SFDC_USERNAME',
-  password: 'SFDC_PASSWORD',
+  username: process.env.SFDC_USERNAME,
+  password: process.env.SFDC_PASSWORD
 });
 
 // Load environment variables for localhost
@@ -37,7 +37,7 @@ app.get('/', function(req, res) {
       console.error('oauth get Access Token error ' + error);
     });
     res.render('index', {
-        appId: process.env.APPID,
+        appId: process.env.CONSUMERKEY,
         loApp: process.env.LOAPP,
         token : myToken
     });
