@@ -8,7 +8,7 @@ let Oauth = require('salesforce-oauth2-flow');
 
 let oauth = new Oauth();
 
-const parameters = {
+const credentials = {
   client_id: process.env.CONSUMERKEY,
   client_secret: process.env.SECRET,
   username: process.env.SFDC_USERNAME,
