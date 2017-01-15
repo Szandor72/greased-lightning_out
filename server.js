@@ -13,7 +13,7 @@ const parameters = {
   client_secret: process.env.SECRET,
   username: process.env.SFDC_USERNAME,
   password: process.env.SFDC_PASSWORD
-});
+}
 
 // Load environment variables for localhost
 try {
