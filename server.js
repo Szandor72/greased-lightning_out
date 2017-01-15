@@ -9,7 +9,7 @@ let Oauth = require('salesforce-oauth2-flow');
 let oauth = new Oauth();
 
 const parameters = {
-  client_id: process.env.APPID,
+  client_id: process.env.CONSUMERKEY,
   client_secret: process.env.SECRET,
   username: 'SFDC_USERNAME',
   password: 'SFDC_PASSWORD',
