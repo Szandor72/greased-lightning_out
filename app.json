@@ -7,7 +7,7 @@
   "env": {
   	"CONSUMERKEY": {
   		"description": "The connected app id that you create(d). Make sure it is CORS enabled.",
-  		"value": ""
+  		"value": "empty"
   	},
   	"LOAPP": {
   		"description": "Name of the Lightning Out dependency app (myNamespace:myApp).",
@@ -15,15 +15,15 @@
   	},
     "SECRET": {
   		"description": " The Consumer Secret",
-  		"value": ""
+  		"value": "empty"
   	},
     "SFDC_USERNAME": {
   		"description": "Your Salesforce username",
-  		"value": ""
+  		"value": "empty"
   	},
     "SFDC_PASSWORD": {
   		"description": "Your Salesforce password",
-  		"value": ""
+  		"value": "empty"
   	}
   }
 }
