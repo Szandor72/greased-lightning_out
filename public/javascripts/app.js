@@ -92,15 +92,16 @@ function queryCases() {
 }
 
 function createComponentServerSide(){
+  console.log("createComponentServerSide has been called.");
   var url = config.instanceUrl.replace("my.salesforce", "lightning.force");
   var token = "Bearer "+config.accessToken;
   $Lightning.use(config.loApp, function() {
-                 $Lightning.createComponent("szDev:DisplayCase",
+                 $Lightning.createComponent("c:searchBarInputTextTest",
                  {},
                 "lightning-out",
                      function(cmp) {
                         console.log('Created Component with Server Side Oauth');
-                        $A.eventService.addHandler({ "event": "szDev:DisplayCaseEvt", "handler" : appEventListener});
+                        $A.eventService.addHandler({ "event": "c:searchBarInputTextTest", "handler" : appEventListener});
                      });
            },url,token );
 }
