@@ -15,7 +15,7 @@ const parameters = {
   password: process.env.SFDC_PASSWORD
 }
 
-/ Load environment variables for localhost
+// Load environment variables for localhost
 try {
     env(__dirname + '/.env');
 } catch (e) {}
