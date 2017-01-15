@@ -43,7 +43,7 @@ oauth.getAccessToken(credentials).then(function(result) {
 
 app.get('/', function(req, res) {
     res.render('index', {
-        appId: process.env.APPID,
+        consumerKey: process.env.CONSUMERKEY,
         loApp: process.env.LOAPP,
         instanceUrl : instanceUrl,
         accessToken : accessToken
