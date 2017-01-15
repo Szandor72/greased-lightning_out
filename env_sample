@@ -1,0 +1,30 @@
+#
+# Sample environment variables
+# If running localhost, copy/rename this to .env and set the appropriate values
+#
+
+# Environment variables for localhost
+
+# The Consumer Key for the SFDC Connected App for OAuth
+APPID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+# The Consumer Secret
+SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+# The namespace:name of the app to use for Lightning Out
+LOAPP=szDev:loTest
+
+# OAUTH2 callback url
+CALLBACKURL=myapp.company.com/callback
+
+# HTTP Port
+PORT=5000
+
+# Salesforce Username
+SFDC_USERNAME=XXXX
+
+# Salesforce password
+SFDC_PASSWORD=XXXX
+
+# HTTPS Port
+HTTPS_PORT=5001
