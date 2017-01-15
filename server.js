@@ -15,7 +15,7 @@ const parameters = {
   password: process.env.SFDC_PASSWORD
 }
 
-// Load environment variables for localhost
+/ Load environment variables for localhost
 try {
     env(__dirname + '/.env');
 } catch (e) {}
@@ -29,17 +29,24 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/public'));
 
+var accessToken;
+var instanceUrl;
+
+oauth.getAccessToken(credentials).then(function(result) {
+     console.log("display oauth result", result);
+     accessToken = result.access_token;
+     instanceUrl = result.instance_url;
+ }).catch(function(error) {
+     console.error('oauth get Access Token error ', error);
+   });
+
+
 app.get('/', function(req, res) {
-  var myToken = oauth.getAccessToken(parameters).then(body => {
-    let accessToken = body.access_token;
-    let instanceUrl = body.instance_url;
-    }).catch((error => {
-      console.error('oauth get Access Token error ' + error);
-    });
     res.render('index', {
-        appId: process.env.CONSUMERKEY,
+        appId: process.env.APPID,
         loApp: process.env.LOAPP,
-        token : myToken
+        instanceUrl : instanceUrl,
+        accessToken : accessToken
     });
 });
 
