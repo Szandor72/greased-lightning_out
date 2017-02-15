@@ -1,8 +1,8 @@
 #Lightning Out public Demo for greased - a Lightning End-To-End Testing Framework
 
-Visit greased (here)[https://github.com/stevebuik/greased]
+Visit greased here: https://github.com/stevebuik/greased
 
-
+Do not use for production environment.
 
 
 
